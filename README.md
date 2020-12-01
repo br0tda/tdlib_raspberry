@@ -40,4 +40,6 @@ ls -l td/tdlib
 ## Compatibility
 Tested on: 
 - **Raspberry Pi 3B+ 
-Linux raspberrypi 5.4.51-v7+ #1333 SMP Mon Aug 10 16:45:19 BST 2020 armv7l GNU/Linux**
+Linux raspberrypi 5.4.51-v7+ #1333 SMP Mon Aug 10 16:45:19 BST 2020 armv7l GNU/Linux** 
+
+- Language **Python**
