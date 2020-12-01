@@ -16,7 +16,7 @@ mkdir build
 sudo nano tdutils/td/utils/Time.cpp
 ```
 
-- Now follow these [guide](https://github.com/tdlib/td/issues/1191#issue-700415611) and add the lines marked with (+) approximately at the end of the file.
+- Now follow this [guide](https://github.com/tdlib/td/issues/1191#issue-700415611) and add the lines marked with (+) approximately at the end of the file.
 
 ```bash
  if (CMAKE_HOST_SYSTEM_NAME MATCHES "NetBSD")
