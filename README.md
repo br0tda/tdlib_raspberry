@@ -2,7 +2,7 @@
 
 A plug&play **libtdjson.so** built for **Raspberry Pi**
 
-## Manual built
+## How to build
 
 If you want to build by your own follow these steps:
 
