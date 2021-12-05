@@ -6,6 +6,14 @@ A plug&play **libtdjson.so** built for **Raspberry Pi**
 
 If you want to build by your own follow these steps:
 
+`TDLib` depends on:
+
+* C++14 compatible compiler (Clang 3.4+, GCC 4.9+, MSVC 19.0+ (Visual Studio 2015+), Intel C++ Compiler 17+)
+* OpenSSL
+* zlib
+* gperf (build only)
+* CMake (3.0.2+, build only)
+
 ```bash
 git clone https://github.com/tdlib/td.git
 cd td
