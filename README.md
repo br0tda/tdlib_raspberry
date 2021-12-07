@@ -1,6 +1,6 @@
 # tdlib for Raspberry
 
-A plug&play **libtdjson.so** built for **Raspberry Pi**
+A plug&play **libtdjson.so v1.7.9** built for **Raspberry Pi**
 
 ## How to build
 
@@ -17,33 +17,35 @@ If you want to build by your own follow these steps:
 ```bash
 git clone https://github.com/tdlib/td.git
 cd td
-git checkout v1.7.0
 rm -rf build
 mkdir build
 
-sudo nano tdutils/td/utils/Time.cpp
+sudo nano CMakeLists.txt
 ```
 
-- Now follow this [guide](https://github.com/tdlib/td/issues/1191#issue-700415611) and add the lines marked with (+) approximately at the end of the file.
+- Now add this instruction
 
 ```bash
- if (CMAKE_HOST_SYSTEM_NAME MATCHES "NetBSD")
-   target_link_libraries(tdutils PUBLIC /usr/pkg/gcc5/i486--netbsdelf/lib/libatomic.so)
-+else()
-+  target_link_libraries(tdutils PUBLIC atomic)
- endif()
+ set(CMAKE_CXX_LINK_FLAGS "${CMAKE_CXX_LINK_FLAGS} -latomic")
 ```
 
 - Now you are able to build
 
 ```bash
 cd build
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=../tdlib ..
+cmake -DCMAKE_BUILD_TYPE=Release
+cd ..
+php SplitSource.php
+cd build
 cmake --build . --target install
 cd ..
+php SplitSource.php --undo
 cd ..
 ls -l td/tdlib
 ```
+## Tips
+
+You may have some issues due to low memory on your board: try to increaseyour SWAP
 
 ## Compatibility
 Tested on: 
