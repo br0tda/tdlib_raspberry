@@ -33,11 +33,12 @@ sudo nano CMakeLists.txt
 
 ```bash
 cd build
-cmake -DCMAKE_BUILD_TYPE=Release
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=../tdlib -DTD_ENABLE_LTO=ON ..
+cmake --build . --target prepare_cross_compiling -j 4
 cd ..
 php SplitSource.php
 cd build
-cmake --build . --target install
+cmake --build . --target install -j 4
 cd ..
 php SplitSource.php --undo
 cd ..
