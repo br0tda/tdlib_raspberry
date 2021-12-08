@@ -50,7 +50,7 @@ ls -l td/tdlib
 ```
 ## Tips
 
-You may have some issues due to low memory on your board: try to increaseyour SWAP
+You may have some issues due to low memory on your board: try to [increase your SWAP](https://wpitchoune.net/tricks/raspberry_pi3_increase_swap_size.html)
 
 ## Compatibility
 Tested on: 
