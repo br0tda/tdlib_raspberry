@@ -24,13 +24,12 @@ sudo nano tdutils/CMakeLists.txt
 ```
 
 - Now add this instruction
-
-```bash
+```diff
  if (CMAKE_HOST_SYSTEM_NAME MATCHES "NetBSD")
    target_link_libraries(tdutils PUBLIC /usr/pkg/gcc5/i486--netbsdelf/lib/libatomic.so)
-+else()
-+  target_link_libraries(tdutils PUBLIC atomic)
- endif()
++++ else()
++++   target_link_libraries(tdutils PUBLIC atomic)
+endif()
 ```
 
 - Now you are able to build
