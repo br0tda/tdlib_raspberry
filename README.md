@@ -20,13 +20,17 @@ cd td
 rm -rf build
 mkdir build
 
-sudo nano CMakeLists.txt
+sudo nano tdutils/CMakeLists.txt
 ```
 
 - Now add this instruction
 
 ```bash
- set(CMAKE_CXX_LINK_FLAGS "${CMAKE_CXX_LINK_FLAGS} -latomic")
+ if (CMAKE_HOST_SYSTEM_NAME MATCHES "NetBSD")
+   target_link_libraries(tdutils PUBLIC /usr/pkg/gcc5/i486--netbsdelf/lib/libatomic.so)
++else()
++  target_link_libraries(tdutils PUBLIC atomic)
+ endif()
 ```
 
 - Now you are able to build
