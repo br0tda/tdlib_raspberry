@@ -1,6 +1,6 @@
 # tdlib for Raspberry
 
-A plug&play **libtdjson.so v1.7.1** built for **Raspberry Pi**
+A plug&play **libtdjson.so v1.7.10** built for **Raspberry Pi**
 
 ## How to build
 
