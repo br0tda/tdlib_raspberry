@@ -1,9 +1,0 @@
-prefix=/home/pi/WShabtiFilter/tdlib
-
-Name: tddb
-Description: Telegram Library - Database
-Version: 1.7.0
-
-CFlags: -I"${prefix}/include"
-Libs: -L"${prefix}/lib" -ltddb
-Requires.private: tdactor tdutils tdsqlite
