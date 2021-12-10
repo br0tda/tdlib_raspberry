@@ -37,11 +37,11 @@ endif()
 ```bash
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=../tdlib -DTD_ENABLE_LTO=ON ..
-cmake --build . --target prepare_cross_compiling -j 4
+cmake --build . --target prepare_cross_compiling -j $(nproc)
 cd ..
 php SplitSource.php
 cd build
-cmake --build . --target install -j 4
+cmake --build . --target install -j $(nproc)
 cd ..
 php SplitSource.php --undo
 cd ..
@@ -54,6 +54,6 @@ You may have some issues due to low memory on your board: try to [increase your 
 ## Compatibility
 Tested on: 
 - **Raspberry Pi 3B+ 
-Linux raspberrypi 5.10.63-v7+ #1496 SMP Wed Dec 1 15:58:11 GMT 2021 armv7l GNU/Linux** 
+Linux raspberrypi 5.10.63-v7+ armv7l GNU/Linux** 
 
 - Language **Python**
