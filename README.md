@@ -54,6 +54,6 @@ You may have some issues due to low memory on your board: try to [increase your 
 ## Compatibility
 Tested on: 
 - **Raspberry Pi 3B+ 
-Linux raspberrypi 5.4.51-v7+ #1333 SMP Mon Aug 10 16:45:19 BST 2020 armv7l GNU/Linux** 
+Linux raspberrypi 5.10.63-v7+ #1496 SMP Wed Dec 1 15:58:11 GMT 2021 armv7l GNU/Linux** 
 
 - Language **Python**
