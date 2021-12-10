@@ -1,0 +1,10 @@
+prefix=/home/pi/tdlib
+
+Name: tdcore
+Description: Telegram Library - Core
+Version: 1.7.10
+
+CFlags: -I"${prefix}/include"
+Libs: -L"${prefix}/lib" -ltdcore
+Requires.private: tdapi tdactor tdutils tdnet tddb
+Libs.private: -L"/usr/lib/arm-linux-gnueabihf" -l:libcrypto.so -ldl -L"/usr/lib/arm-linux-gnueabihf" -l:libz.so

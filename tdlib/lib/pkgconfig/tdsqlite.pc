@@ -1,0 +1,9 @@
+prefix=/home/pi/tdlib
+
+Name: tdsqlite
+Description: Telegram Library - SQLite
+Version: 1.7.10
+
+CFlags: -I"${prefix}/include"
+Libs: -L"${prefix}/lib" -ltdsqlite
+Libs.private: -L"/usr/lib/arm-linux-gnueabihf" -l:libcrypto.so -ldl -L"/usr/lib/arm-linux-gnueabihf" -l:libz.so

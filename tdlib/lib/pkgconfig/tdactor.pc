@@ -1,0 +1,9 @@
+prefix=/home/pi/tdlib
+
+Name: tdactor
+Description: Telegram Library - Actor
+Version: 1.7.10
+
+CFlags: -I"${prefix}/include"
+Libs: -L"${prefix}/lib" -ltdactor
+Requires.private: tdutils

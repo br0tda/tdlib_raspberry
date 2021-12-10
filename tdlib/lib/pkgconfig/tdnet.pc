@@ -1,0 +1,10 @@
+prefix=/home/pi/tdlib
+
+Name: tdnet
+Description: Telegram Library - Net
+Version: 1.7.10
+
+CFlags: -I"${prefix}/include"
+Libs: -L"${prefix}/lib" -ltdnet
+Requires.private: tdutils tdactor
+Libs.private: -L"/usr/lib/arm-linux-gnueabihf" -l:libssl.so -L"/usr/lib/arm-linux-gnueabihf" -l:libcrypto.so -ldl -L"/usr/lib/arm-linux-gnueabihf" -l:libz.so

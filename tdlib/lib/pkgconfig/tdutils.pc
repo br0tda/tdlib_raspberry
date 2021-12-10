@@ -1,0 +1,9 @@
+prefix=/home/pi/tdlib
+
+Name: tdutils
+Description: Telegram Library - Utils
+Version: 1.7.10
+
+CFlags: -I"${prefix}/include"
+Libs: -L"${prefix}/lib" -ltdutils
+Libs.private: -pthread -L"/usr/lib/arm-linux-gnueabihf" -l:libcrypto.so -ldl -L"/usr/lib/arm-linux-gnueabihf" -l:libz.so -latomic
